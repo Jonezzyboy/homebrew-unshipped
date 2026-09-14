@@ -1,6 +1,6 @@
 cask "unshipped" do
-  version "0.4.0"
-  sha256 "1818a90278b3d067ad895aaf32ea433ebc7da4c646feebd61efd4de6662ea56c"
+  version "0.4.1"
+  sha256 "b5874e5632a6f0628223a7a307d165c148221814e71e91af87035ead6441ffe0"
 
   url "https://github.com/Jonezzyboy/unshipped/releases/download/v#{version}/unshipped_#{version}_arm64.dmg"
   name "unshipped"
