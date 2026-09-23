@@ -1,9 +1,9 @@
 cask "unshipped" do
-  version "0.22.0"
-  sha256 "02b3af7ca620c3718ccd54e4ac589722814726d046190d750f22adb5105ddeaa"
+  version "0.23.0"
+  sha256 "52020f13c599680d6007f6b984b375d63b7a93973b26e65a8b7140a227de9776"
 
   url "https://github.com/Jonezzyboy/unshipped/releases/download/v#{version}/unshipped_#{version}_arm64.dmg"
-  name "unshipped"
+  name "Unshipped"
   desc "Shows which GitHub repos have commits waiting on a release"
   homepage "https://github.com/Jonezzyboy/unshipped"
 
@@ -11,14 +11,14 @@ cask "unshipped" do
   depends_on formula: "gh"
   depends_on macos: :big_sur
 
-  app "unshipped.app"
+  app "Unshipped.app"
 
   # Ad-hoc signed rather than notarised, so Gatekeeper blocks first launch
   # otherwise. Drop once the build carries a Developer ID signature.
   postflight_steps do
     run "/usr/bin/xattr",
-        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/unshipped.app"],
-        writable_paths: ["unshipped.app"],
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Unshipped.app"],
+        writable_paths: ["Unshipped.app"],
         writable_base:  :appdir
   end
 
